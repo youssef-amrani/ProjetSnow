@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-20T01:35:38.210563" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\geams\OneDrive\Bureau\ProjetAlten\test.robot">
+<test id="s1-t1" name="Rechercher un mot clé sur Bing" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-20T01:35:38.428422" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-20T01:35:38.428422" elapsed="1.813696"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-20T01:35:40.243009" elapsed="0.020999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-20T01:35:40.265008" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T01:35:40.265008" elapsed="0.058017"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-20T01:35:41.324044" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-20T01:35:40.323025" elapsed="1.001019"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-20T01:35:41.325028" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2025-02-20T01:35:41.710144" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-20T01:35:41.710144" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-20T01:35:41.324044" elapsed="0.981649"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Robot Framework</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-20T01:35:42.306969" elapsed="0.041174"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-20T01:35:42.349143" elapsed="2.148570"/>
+</kw>
+<status status="PASS" start="2025-02-20T01:35:38.427366" elapsed="6.071289"/>
+</test>
+<status status="PASS" start="2025-02-20T01:35:38.211548" elapsed="6.289068"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
