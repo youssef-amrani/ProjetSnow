@@ -1,4 +1,8 @@
 import json
+import sys
+
+# Forcer l'encodage UTF-8 (important sous Windows)
+sys.stdout.reconfigure(encoding='utf-8')
 
 # Charger le fichier incident.json
 with open("incident.json", "r", encoding="utf-8") as file:
