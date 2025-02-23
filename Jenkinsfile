@@ -16,26 +16,26 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                bat 'robot -d results C:\\Users\\geams\\OneDrive\\Bureau\\ProjetAlten\\test.robot'
+                bat 'robot -d C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline C:\\Users\\geams\\OneDrive\\Bureau\\ProjetAlten\\test.robot'
             }
         }
         
         stage('Convert Robot Results to JUnit Format') {
             steps {
-                bat 'python -m robot.rebot --xunit results\\xunit_result.xml results\\output.xml'
+                bat 'python -m robot.rebot --xunit C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\xunit_result.xml C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\output.xml'
             }
         }
 
         stage('Debug: Check Files') {
             steps {
-                bat 'dir /s'
-                bat 'type results\\xunit_result.xml'
+                bat 'dir C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline'
+                bat 'type C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\xunit_result.xml'
             }
         }
 
         stage('Publish Test Results') {
             steps {
-                junit 'results/xunit_result.xml'
+                junit '**/xunit_result.xml'
             }
         }
     }
