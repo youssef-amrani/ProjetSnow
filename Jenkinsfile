@@ -38,5 +38,11 @@ pipeline {
                 junit '**/xunit_result.xml'
             }
         }
+
+        stage('Analyze Incident') {
+            steps {
+                bat 'python read_incident.py'
+            }
+        }
     }
 }
