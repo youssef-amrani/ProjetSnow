@@ -22,19 +22,20 @@ pipeline {
         
         stage('Convert Robot Results to JUnit Format') {
             steps {
-                bat 'rebot --xunit C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\xunit_result.xml C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\output.xml'
+                bat 'python -m robot.rebot --xunit xunit_result.xml output.xml'
             }
         }
 
-        stage('Verify JUnit File') {
+        stage('Debug: Check Files') {
             steps {
-                bat 'dir C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline'
+                bat 'dir'
+                bat 'type xunit_result.xml'
             }
         }
 
         stage('Publish Test Results') {
             steps {
-                junit '**/xunit_result.xml'
+                junit 'xunit_result.xml'
             }
         }
     }
