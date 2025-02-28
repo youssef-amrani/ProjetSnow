@@ -41,7 +41,7 @@ pipeline {
 
         stage('Analyze Incident') {
             steps {
-                bat 'python read_incident.py'
+                bat 'test_incident.robot'
             }
         }
     }

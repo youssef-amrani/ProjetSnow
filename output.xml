@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-23T20:18:49.853591" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-24T15:49:03.402720" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Users\geams\OneDrive\Bureau\ProjetAlten\test.robot">
 <test id="s1-t1" name="Rechercher un mot clé sur Bing" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-23T20:18:50.076100" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com'.</msg>
+<msg time="2025-02-24T15:49:03.793737" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-23T20:18:50.076100" elapsed="2.221732"/>
+<status status="PASS" start="2025-02-24T15:49:03.793737" elapsed="3.451057"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-23T20:18:52.297832" elapsed="0.022253"/>
+<status status="PASS" start="2025-02-24T15:49:07.245793" elapsed="0.044004"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-23T20:18:52.321101" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<msg time="2025-02-24T15:49:07.291796" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
 <arg>${SEARCH_INPUT}</arg>
 <arg>Robot Framework</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-23T20:18:52.320085" elapsed="0.083565"/>
+<status status="PASS" start="2025-02-24T15:49:07.290795" elapsed="0.076998"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-23T20:18:53.404035" level="INFO">Slept 1 second.</msg>
+<msg time="2025-02-24T15:49:08.368906" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-23T20:18:52.403650" elapsed="1.000385"/>
+<status status="PASS" start="2025-02-24T15:49:07.368794" elapsed="1.000112"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-02-23T20:18:53.405151" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
-<msg time="2025-02-23T20:18:53.943081" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2025-02-23T20:18:53.943081" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2025-02-24T15:49:08.368906" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2025-02-24T15:49:08.650910" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-24T15:49:08.650910" level="INFO">Releasing special key ENTER.</msg>
 <arg>${SEARCH_INPUT}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-02-23T20:18:53.405061" elapsed="1.288214"/>
+<status status="PASS" start="2025-02-24T15:49:08.368906" elapsed="0.889999"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Robot Framework</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-23T20:18:54.693275" elapsed="0.044708"/>
+<status status="PASS" start="2025-02-24T15:49:09.258905" elapsed="0.062004"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-23T20:18:54.738983" elapsed="2.400917"/>
+<status status="PASS" start="2025-02-24T15:49:09.320909" elapsed="2.177775"/>
 </kw>
-<status status="PASS" start="2025-02-23T20:18:50.074995" elapsed="7.065896"/>
+<status status="PASS" start="2025-02-24T15:49:03.792719" elapsed="7.706968"/>
 </test>
-<status status="PASS" start="2025-02-23T20:18:49.854618" elapsed="7.287270"/>
+<status status="PASS" start="2025-02-24T15:49:03.403719" elapsed="8.095968"/>
 </suite>
 <statistics>
 <total>
