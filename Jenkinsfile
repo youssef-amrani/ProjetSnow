@@ -1,6 +1,10 @@
 pipeline { 
     agent any
 
+    environment {
+        ROBOT_RESULTS_DIR = "${WORKSPACE}/robot_results"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -16,32 +20,26 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                bat 'robot -d C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline C:\\Users\\geams\\OneDrive\\Bureau\\ProjetAlten\\test.robot'
+                bat "robot -d ${ROBOT_RESULTS_DIR} ${WORKSPACE}/test_incident.robot"
             }
         }
         
         stage('Convert Robot Results to JUnit Format') {
             steps {
-                bat 'python -m robot.rebot --xunit C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\xunit_result.xml C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\output.xml'
+                bat "python -m robot.rebot --xunit ${ROBOT_RESULTS_DIR}/xunit_result.xml ${ROBOT_RESULTS_DIR}/output.xml"
             }
         }
 
         stage('Debug: Check Files') {
             steps {
-                bat 'dir C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline'
-                bat 'type C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\xunit_result.xml'
+                bat "dir ${ROBOT_RESULTS_DIR}"
+                bat "type ${ROBOT_RESULTS_DIR}/xunit_result.xml"
             }
         }
 
         stage('Publish Test Results') {
             steps {
-                junit '**/xunit_result.xml'
-            }
-        }
-
-        stage('Analyze Incident') {
-            steps {
-                bat 'test_incident.robot'
+                junit '**/robot_results/xunit_result.xml'
             }
         }
     }
