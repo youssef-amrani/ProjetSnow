@@ -17,6 +17,12 @@ pipeline {
             steps {
                 bat "${PYTHON_ENV}/python -m pip install --upgrade pip"
                 bat "${PYTHON_ENV}/pip install -r ${WORKSPACE}/requirements.txt"
+                bat "${PYTHON_ENV}/pip install robotframework-requests robotframework-jsonlibrary"
+            }
+        }
+        stage('Debug: Check Installed Packages') {
+            steps {
+                bat "${PYTHON_ENV}/pip list"
             }
         }
 
