@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         ROBOT_RESULTS_DIR = "${WORKSPACE}/robot_results"
+        PYTHON_ENV = "c:/Users/geams/OneDrive/Bureau/ProjetAlten/.venv/Scripts"
     }
 
     stages {
@@ -14,19 +15,20 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat "${PYTHON_ENV}/python -m pip install --upgrade pip"
+                bat "${PYTHON_ENV}/pip install -r ${WORKSPACE}/requirements.txt"
             }
         }
 
         stage('Run Robot Tests') {
             steps {
-                bat "robot -d ${ROBOT_RESULTS_DIR} ${WORKSPACE}/test_incident.robot"
+                bat "${PYTHON_ENV}/robot -d ${ROBOT_RESULTS_DIR} ${WORKSPACE}/test_incident.robot"
             }
         }
         
         stage('Convert Robot Results to JUnit Format') {
             steps {
-                bat "python -m robot.rebot --xunit ${ROBOT_RESULTS_DIR}/xunit_result.xml ${ROBOT_RESULTS_DIR}/output.xml"
+                bat "${PYTHON_ENV}/python -m robot.rebot --xunit ${ROBOT_RESULTS_DIR}/xunit_result.xml ${ROBOT_RESULTS_DIR}/output.xml"
             }
         }
 
