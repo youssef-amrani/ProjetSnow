@@ -41,7 +41,7 @@ pipeline {
         stage('Debug: Check Files') {
             steps {
                 bat "dir ${ROBOT_RESULTS_DIR}"
-                bat "type ${ROBOT_RESULTS_DIR}/xunit_result.xml"
+                bat 'type C:\\Users\\geams\\.jenkins\\workspace\\TestRobot_Pipeline\\xunit_result.xml'
             }
         }
 
