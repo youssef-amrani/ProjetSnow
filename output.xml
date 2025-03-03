@@ -1,52 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-24T15:49:03.402720" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\geams\OneDrive\Bureau\ProjetAlten\test.robot">
-<test id="s1-t1" name="Rechercher un mot clé sur Bing" line="11">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-24T15:49:03.793737" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-24T15:49:03.793737" elapsed="3.451057"/>
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-03-03T00:35:46.571303" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Incident" source="C:\Users\geams\OneDrive\Bureau\ProjetAlten\test_incident.robot">
+<test id="s1-t1" name="Créer un ticket Jira pour un incident récupéré" line="12">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-03T00:35:46.950308" level="INFO">${project} = {'key': 'AL'}</msg>
+<var>${project}</var>
+<arg>key=AL</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.949244" elapsed="0.001064"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-24T15:49:07.245793" elapsed="0.044004"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-03T00:35:46.950308" level="INFO">${issuetype} = {'name': 'Tâche'}</msg>
+<var>${issuetype}</var>
+<arg>name=Tâche</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.950308" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-24T15:49:07.291796" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
-<arg>${SEARCH_INPUT}</arg>
-<arg>Robot Framework</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-24T15:49:07.290795" elapsed="0.076998"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-03T00:35:46.950308" level="INFO">${fields} = {'project': {'key': 'AL'}, 'summary': 'Incident de test depuis Robot Framework', 'description': 'Test manuel avant automatisation', 'issuetype': {'name': 'Tâche'}}</msg>
+<var>${fields}</var>
+<arg>project=${project}</arg>
+<arg>summary=Incident de test depuis Robot Framework</arg>
+<arg>description=Test manuel avant automatisation</arg>
+<arg>issuetype=${issuetype}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.950308" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-24T15:49:08.368906" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-24T15:49:07.368794" elapsed="1.000112"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-03T00:35:46.951254" level="INFO">${data} = {'fields': {'project': {'key': 'AL'}, 'summary': 'Incident de test depuis Robot Framework', 'description': 'Test manuel avant automatisation', 'issuetype': {'name': 'Tâche'}}}</msg>
+<var>${data}</var>
+<arg>fields=${fields}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.951254" elapsed="0.000000"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-02-24T15:49:08.368906" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
-<msg time="2025-02-24T15:49:08.650910" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2025-02-24T15:49:08.650910" level="INFO">Releasing special key ENTER.</msg>
-<arg>${SEARCH_INPUT}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-02-24T15:49:08.368906" elapsed="0.889999"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-03T00:35:46.951254" level="INFO">${headers} = {'Authorization': 'Basic riadamine59@gmail.com:ATATT3xFfGF0iz_oNz899-uSJQYn8zxAQCPPN8di_sX5sbgqRe5ZWk6LML4HEvo0Vvsz5FS8_MCAjEVeWC9o-QdQ4eo3Cnsv-EAmpzHmanumHtLxoxWF4QkPQ5xVjPN6Yvkdf0RZdd0nTo9qMCfjCnkg7...</msg>
+<var>${headers}</var>
+<arg>Authorization=Basic ${JIRA_USER}:${JIRA_TOKEN}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.951254" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Robot Framework</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-24T15:49:09.258905" elapsed="0.062004"/>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-03T00:35:46.952249" level="INFO">${auth} = ['riadamine59@gmail.com', 'ATATT3xFfGF0iz_oNz899-uSJQYn8zxAQCPPN8di_sX5sbgqRe5ZWk6LML4HEvo0Vvsz5FS8_MCAjEVeWC9o-QdQ4eo3Cnsv-EAmpzHmanumHtLxoxWF4QkPQ5xVjPN6Yvkdf0RZdd0nTo9qMCfjCnkg7Fk-sBFKFArusJIdxpQXJ...</msg>
+<var>${auth}</var>
+<arg>${JIRA_USER}</arg>
+<arg>${JIRA_TOKEN}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.951254" elapsed="0.000995"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-24T15:49:09.320909" elapsed="2.177775"/>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-03T00:35:46.952249" level="INFO">Creating Session using : alias=jira, url=https://riadamine59.atlassian.net, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x0000020F637EA210&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>jira</arg>
+<arg>${JIRA_URL}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-03T00:35:46.952249" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-02-24T15:49:03.792719" elapsed="7.706968"/>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-03T00:35:48.373279" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue 
+ path_url=/rest/api/2/issue 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '180', 'Content-Type': 'application/json', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGl6X29Oejg5OS11U0pRWW44enhBUUNQUE44ZGlfc1g1c2JncVJlNVpXazZMTUw0SEV2bzBWdnN6NUZTOF9NQ0FqRVZlV0M5by1RZFE0ZW8zQ25zdi1FQW1wekhtYW51bUh0THhveFdGNFFrUFE1eFZqUE42WXZrZGYwUlpkZDBuVG85cU1DZmpDbmtnN0ZrLXNCRktGQXJ1c0pJZHhwUVhKaUdZbEg1RE1NRT1BQjNBMDRENA=='} 
+ body=b'{"fields": {"project": {"key": "AL"}, "summary": "Incident de test depuis Robot Framework", "description": "Test manuel avant automatisation", "issuetype": {"name": "T\\u00e2che"}}}' 
+ </msg>
+<msg time="2025-03-03T00:35:48.373279" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue 
+ status=201, reason=Created 
+ headers={'Date': 'Mon, 03 Mar 2025 00:35:45 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '0bb0e281c544ebd4406e4074271edc94', 'Set-Cookie': 'atlassian.xsrf.token=9946512ef07459aef6bb7aaf1b9c683d9fefd3c9_lin; Path=/; SameSite=None; Secure', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '1de0a315c55e49ddb9c5021e088f099d', 'Atl-Request-Id': '1de0a315-c55e-49dd-b9c5-021e088f099d', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=1230,atl-edge-internal;dur=32,atl-edge-upstream;dur=1201,atl-edge-pop;desc="aws-eu-central-2"', 'Transfer-Encoding': 'chunked'} 
+ body={"id":"10033","key":"AL-2","self":"https://riadamine59.atlassian.net/rest/api/2/issue/10033"} 
+ </msg>
+<msg time="2025-03-03T00:35:48.373279" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-03-03T00:35:48.374279" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>jira</arg>
+<arg>/rest/api/2/issue</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-03T00:35:46.952249" elapsed="1.422030"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-03T00:35:48.374279" level="INFO">{"id":"10033","key":"AL-2","self":"https://riadamine59.atlassian.net/rest/api/2/issue/10033"}</msg>
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-03T00:35:48.374279" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-03-03T00:35:48.375319" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-03-03T00:35:48.375319" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-03T00:35:48.377349" level="INFO">"✅ Ticket Jira créé avec succès"</msg>
+<arg>"✅ Ticket Jira créé avec succès"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-03T00:35:48.375319" elapsed="0.002030"/>
+</kw>
+<doc>Tester la création d'un ticket Jira avec les mêmes données que Postman</doc>
+<status status="PASS" start="2025-03-03T00:35:46.949244" elapsed="1.428105"/>
 </test>
-<status status="PASS" start="2025-02-24T15:49:03.403719" elapsed="8.095968"/>
+<status status="PASS" start="2025-03-03T00:35:46.572246" elapsed="1.806029"/>
 </suite>
 <statistics>
 <total>
@@ -55,7 +111,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="Test Incident" id="s1" pass="1" fail="0" skip="0">Test Incident</stat>
 </suite>
 </statistics>
 <errors>
