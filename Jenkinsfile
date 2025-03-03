@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ROBOT_RESULTS_DIR = "${WORKSPACE}/robot_results"
+        ROBOT_RESULTS_DIR = "${WORKSPACE}"
         PYTHON_ENV = "c:/Users/geams/OneDrive/Bureau/ProjetAlten/.venv/Scripts"
     }
 
@@ -47,7 +47,7 @@ pipeline {
 
         stage('Publish Test Results') {
             steps {
-                junit '**/robot_results/xunit_result.xml'
+                junit '**/xunit_result.xml'
             }
         }
     }
