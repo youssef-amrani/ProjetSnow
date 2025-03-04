@@ -23,19 +23,31 @@ Créer un ticket Jira pour un incident récupéré
 
     ${data}=    Create Dictionary    fields=${fields}
 
-    # 🔹 Ajouter les headers pour l'authentification
+    # 🔹 Ajouter les headers
     ${headers}=    Create Dictionary
-    ...    Authorization=Basic ${JIRA_USER}:${JIRA_TOKEN}
     ...    Content-Type=application/json
 
-    # 🔹 Créer la session et envoyer la requête
-   ${auth}=    Create List    ${JIRA_USER}    ${JIRA_TOKEN}
-    Create Session    jira    ${JIRA_URL}    auth=${auth}
+    # 🔹 Créer la session avec authentification correcte
+    ${auth}=    Create List    ${JIRA_USER}    ${JIRA_TOKEN}
+    Create Session    jira    ${JIRA_URL}    auth=${auth}    headers=${headers}
 
+    # 🔹 Envoyer la requête POST
     ${response}=    POST On Session    jira    /rest/api/2/issue    json=${data}
-    Log    ${response.content}    # Ajoute cette ligne
 
+    # 🔹 Log de la réponse
+    Log    ${response.status_code}
+    Log    ${response.content}
 
     # 🔹 Vérification du succès
     Should Be Equal As Numbers    ${response.status_code}    201
     Log    "✅ Ticket Jira créé avec succès"
+
+    # 🔹 Extraction de l'ID du ticket
+    ${ticket_id}=    Get Value From Json    ${response.json()}    $.id
+    ${ticket_id}=    Set Variable    ${ticket_id}[0]    # Extraire la valeur de la liste
+    Log    "🔹 ID du ticket Jira: ${ticket_id}"
+
+    # 🔹 Vérification du ticket via GET
+    ${ticket_response}=    GET On Session    jira    /rest/api/2/issue/${ticket_id}
+    Should Be Equal As Numbers    ${ticket_response.status_code}    200
+    Log    "✅ Ticket Jira récupéré avec succès"
