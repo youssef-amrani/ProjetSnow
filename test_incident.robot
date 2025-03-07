@@ -8,7 +8,7 @@ Library    Process
 *** Variables ***
 ${JIRA_URL}      https://riadamine59.atlassian.net
 ${JIRA_USER}     riadamine59@gmail.com
-${JIRA_TOKEN}    -L_APMxFiUDL8l_OWdCjwlVs_urzUiVtmHpzI1wDtZJ7nVXc5VQpbc1tTeQ1HV4lKRPeZiEes-bXo_itdTThE1EiYYa-xIRnCXYC29Pj3z3ihD7O3Ca0nwOlhdN6HP5ktV5gZOsrOpfp2rprfJ1y1NhsOl3H9jFosASs=4DB2AA5C
+${JIRA_TOKEN}    ATATT3xFfGF0aAZapsM-L_APMxFiUDL8l_OWdCjwlVs_urzUiVtmHpzI1wDtZJ7nVXc5VQpbc1tTeQ1HV4lKRPeZiEes-bXo_itdTThE1EiYYa-xIRnCXYC29Pj3z3ihD7O3Ca0nwOlhdN6HP5ktV5gZOsrOpfp2rprfJ1y1NhsOl3H9jFosASs=4DB2AA5C
 ${ATTACHMENT_PATH}    C:/Users/geams/OneDrive/Bureau/English.txt 
 
 *** Test Cases ***
