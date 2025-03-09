@@ -1,356 +1,494 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-03-07T01:09:29.871192" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-03-09T21:28:22.811018" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Incident" source="C:\Users\geams\OneDrive\Bureau\ProjetAlten\test_incident.robot">
-<test id="s1-t1" name="Créer un ticket Jira et effectuer des actions post-création" line="15">
+<test id="s1-t1" name="Créer un ticket Jira et effectuer des actions post-création" line="16">
 <kw name="Créer un ticket Jira">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:30.396192" level="INFO">${project} = {'key': 'AL'}</msg>
+<msg time="2025-03-09T21:28:23.225895" level="INFO">${project} = {'key': 'AL'}</msg>
 <var>${project}</var>
 <arg>key=AL</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.396192" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:23.224895" elapsed="0.001000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:30.396192" level="INFO">${issuetype} = {'name': 'Tâche'}</msg>
+<msg time="2025-03-09T21:28:23.225895" level="INFO">${issuetype} = {'name': 'Tâche'}</msg>
 <var>${issuetype}</var>
 <arg>name=Tâche</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.396192" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:23.225895" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:30.397192" level="INFO">${fields} = {'project': {'key': 'AL'}, 'summary': 'Incident de test depuis Robot Framework', 'description': 'Test manuel avant automatisation', 'issuetype': {'name': 'Tâche'}}</msg>
+<msg time="2025-03-09T21:28:23.225895" level="INFO">${fields} = {'project': {'key': 'AL'}, 'summary': 'Incident de test depuis Robot Framework', 'description': "Ticket généré automatiquement pour test d'automatisation", 'issuetype': {'name': 'Tâche'}}</msg>
 <var>${fields}</var>
 <arg>project=${project}</arg>
 <arg>summary=Incident de test depuis Robot Framework</arg>
-<arg>description=Test manuel avant automatisation</arg>
+<arg>description=Ticket généré automatiquement pour test d'automatisation</arg>
 <arg>issuetype=${issuetype}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.396192" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:23.225895" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:30.397192" level="INFO">${data} = {'fields': {'project': {'key': 'AL'}, 'summary': 'Incident de test depuis Robot Framework', 'description': 'Test manuel avant automatisation', 'issuetype': {'name': 'Tâche'}}}</msg>
+<msg time="2025-03-09T21:28:23.225895" level="INFO">${data} = {'fields': {'project': {'key': 'AL'}, 'summary': 'Incident de test depuis Robot Framework', 'description': "Ticket généré automatiquement pour test d'automatisation", 'issuetype': {'name': 'Tâche'}}}</msg>
 <var>${data}</var>
 <arg>fields=${fields}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.397192" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:23.225895" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:30.397192" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<msg time="2025-03-09T21:28:23.225895" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>Content-Type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.397192" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:23.225895" elapsed="0.000000"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-03-07T01:09:30.397192" level="INFO">${auth} = ['riadamine59@gmail.com', 'ATATT3xFfGF0aAZapsM-L_APMxFiUDL8l_OWdCjwlVs_urzUiVtmHpzI1wDtZJ7nVXc5VQpbc1tTeQ1HV4lKRPeZiEes-bXo_itdTThE1EiYYa-xIRnCXYC29Pj3z3ihD7O3Ca0nwOlhdN6HP5ktV5gZOsrOpfp2rprfJ1y1NhsOl...</msg>
+<msg time="2025-03-09T21:28:23.226895" level="INFO">${auth} = ['riadamine59@gmail.com', 'ATATT3xFfGF0aAZapsM-L_APMxFiUDL8l_OWdCjwlVs_urzUiVtmHpzI1wDtZJ7nVXc5VQpbc1tTeQ1HV4lKRPeZiEes-bXo_itdTThE1EiYYa-xIRnCXYC29Pj3z3ihD7O3Ca0nwOlhdN6HP5ktV5gZOsrOpfp2rprfJ1y1NhsOl...</msg>
 <var>${auth}</var>
 <arg>${JIRA_USER}</arg>
 <arg>${JIRA_TOKEN}</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.397192" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:23.226895" elapsed="0.000000"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-03-07T01:09:30.397192" level="INFO">Creating Session using : alias=jira, url=https://riadamine59.atlassian.net, headers={'Content-Type': 'application/json'},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x0000028D286FBDD0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-03-09T21:28:23.226895" level="INFO">Creating Session using : alias=jira, url=https://riadamine59.atlassian.net, headers={'Content-Type': 'application/json'},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002410546C8C0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>jira</arg>
 <arg>${JIRA_URL}</arg>
 <arg>auth=${auth}</arg>
 <arg>headers=${headers}</arg>
 <arg>verify=False</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-03-07T01:09:30.397192" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:23.226895" elapsed="0.000000"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-03-07T01:09:32.074747" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue 
+<msg time="2025-03-09T21:28:24.445101" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue 
  path_url=/rest/api/2/issue 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '180', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
- body=b'{"fields": {"project": {"key": "AL"}, "summary": "Incident de test depuis Robot Framework", "description": "Test manuel avant automatisation", "issuetype": {"name": "T\\u00e2che"}}}' 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '219', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
+ body=b'{"fields": {"project": {"key": "AL"}, "summary": "Incident de test depuis Robot Framework", "description": "Ticket g\\u00e9n\\u00e9r\\u00e9 automatiquement pour test d\'automatisation", "issuetype": {"name": "T\\u00e2che"}}}' 
  </msg>
-<msg time="2025-03-07T01:09:32.074747" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue 
+<msg time="2025-03-09T21:28:24.445101" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue 
  status=201, reason=Created 
- headers={'Date': 'Fri, 07 Mar 2025 01:09:31 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '40f394db39bc7e8eb4fc807dd0628c08', 'Set-Cookie': 'atlassian.xsrf.token=d9b97d3818a79e56c2bda41dc92dddb5062a2008_lin; Path=/; SameSite=None; Secure', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '95a997568f0f4f1092a6a375618a0562', 'Atl-Request-Id': '95a99756-8f0f-4f10-92a6-a375618a0562', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=857,atl-edge-internal;dur=54,atl-edge-upstream;dur=804,atl-edge-pop;desc="aws-eu-central-2"', 'Transfer-Encoding': 'chunked'} 
- body={"id":"10133","key":"AL-52","self":"https://riadamine59.atlassian.net/rest/api/2/issue/10133"} 
+ headers={'Date': 'Sun, 09 Mar 2025 21:28:23 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '483dbf8253158bfac43fab180f676d17', 'Set-Cookie': 'atlassian.xsrf.token=4c29a02aa48f9e4aae1b2bbfe5d84ae01fe9ae1c_lin; Path=/; SameSite=None; Secure', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': 'c83324cf0c4b4e748ad38b3d4f391362', 'Atl-Request-Id': 'c83324cf-0c4b-4e74-8ad3-8b3d4f391362', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=753,atl-edge-internal;dur=36,atl-edge-upstream;dur=718,atl-edge-pop;desc="aws-eu-west-2"', 'Transfer-Encoding': 'chunked'} 
+ body={"id":"10197","key":"AL-86","self":"https://riadamine59.atlassian.net/rest/api/2/issue/10197"} 
  </msg>
-<msg time="2025-03-07T01:09:32.074747" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-03-09T21:28:24.445101" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-03-07T01:09:32.075680" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2025-03-09T21:28:24.447055" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>jira</arg>
 <arg>/rest/api/2/issue</arg>
 <arg>json=${data}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.398192" elapsed="1.677488"/>
+<status status="PASS" start="2025-03-09T21:28:23.226895" elapsed="1.220160"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.075680" level="INFO">Argument types are:
+<msg time="2025-03-09T21:28:24.448090" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.075680" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2025-03-07T01:09:32.089680" level="INFO">${ticket_id} = ['10133']</msg>
-<var>${ticket_id}</var>
-<arg>${response.json()}</arg>
-<arg>$.id</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2025-03-07T01:09:32.075680" elapsed="0.014000"/>
+<status status="PASS" start="2025-03-09T21:28:24.447055" elapsed="0.001035"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.089680" level="INFO">${ticket_id} = 10133</msg>
-<var>${ticket_id}</var>
-<arg>${ticket_id}[0]</arg>
+<msg time="2025-03-09T21:28:24.449226" level="INFO">${ticket_key} = AL-86</msg>
+<var>${ticket_key}</var>
+<arg>${response.json()["key"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.089680" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.448090" elapsed="0.001136"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.090681" level="INFO">"🔹 ID du ticket Jira: 10133"</msg>
-<arg>"🔹 ID du ticket Jira: ${ticket_id}"</arg>
+<msg time="2025-03-09T21:28:24.449226" level="INFO">"✅ Ticket créé avec la clé : AL-86"</msg>
+<arg>"✅ Ticket créé avec la clé : ${ticket_key}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.089680" elapsed="0.001001"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.090681" level="INFO">"✅ Ticket créé : 10133"</msg>
-<arg>"✅ Ticket créé : ${ticket_id}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.090681" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.449226" elapsed="0.000000"/>
 </kw>
 <return>
-<value>${ticket_id}</value>
-<status status="PASS" start="2025-03-07T01:09:32.091679" elapsed="0.000000"/>
+<value>${ticket_key}</value>
+<status status="PASS" start="2025-03-09T21:28:24.450183" elapsed="0.000000"/>
 </return>
-<msg time="2025-03-07T01:09:32.091679" level="INFO">${ticket_id} = 10133</msg>
-<var>${ticket_id}</var>
-<doc>Création d'un ticket Jira et retour de son ID.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.395191" elapsed="1.696488"/>
+<msg time="2025-03-09T21:28:24.450183" level="INFO">${ticket_key} = AL-86</msg>
+<var>${ticket_key}</var>
+<doc>Création d'un ticket Jira et retour de sa clé (ex: AL-79).</doc>
+<status status="PASS" start="2025-03-09T21:28:23.224895" elapsed="1.225288"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:24.451173" level="INFO">"🔹 Ticket clé récupérée par Robot Framework : AL-86"</msg>
+<arg>"🔹 Ticket clé récupérée par Robot Framework : ${ticket_key}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:24.450183" elapsed="0.000990"/>
 </kw>
 <kw name="Lister les transitions disponibles">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-03-07T01:09:32.280995" level="INFO">GET Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/10133/transitions 
- path_url=/rest/api/2/issue/10133/transitions 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=d9b97d3818a79e56c2bda41dc92dddb5062a2008_lin', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
+<msg time="2025-03-09T21:28:24.687977" level="INFO">GET Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/transitions 
+ path_url=/rest/api/2/issue/AL-86/transitions 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=4c29a02aa48f9e4aae1b2bbfe5d84ae01fe9ae1c_lin', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
  body=None 
  </msg>
-<msg time="2025-03-07T01:09:32.280995" level="INFO">GET Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/10133/transitions 
+<msg time="2025-03-09T21:28:24.687977" level="INFO">GET Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/transitions 
  status=200, reason=OK 
- headers={'Date': 'Fri, 07 Mar 2025 01:09:31 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '31b49f9e68bcafc4bb59659f488c68bb', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '62e35d87aede4fe38cd635690104345e', 'Atl-Request-Id': '62e35d87-aede-4fe3-8cd6-35690104345e', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=132,atl-edge-internal;dur=12,atl-edge-upstream;dur=121,atl-edge-pop;desc="aws-eu-central-2"', 'Transfer-Encoding': 'chunked'} 
+ headers={'Date': 'Sun, 09 Mar 2025 21:28:23 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': 'f4a0128fec134566582a9d66251abac2', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': 'c955e5f7c40b4f918229f65538d3ef75', 'Atl-Request-Id': 'c955e5f7-c40b-4f91-8229-f65538d3ef75', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=131,atl-edge-internal;dur=12,atl-edge-upstream;dur=118,atl-edge-pop;desc="aws-eu-west-2"', 'Transfer-Encoding': 'chunked'} 
  body={"expand":"transitions","transitions":[{"id":"151","name":"Done","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10002","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Terminé(e)","id":"10002","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Terminé"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"171","name":"Rejected","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10004","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Rejeté","id":"10004","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Terminé"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"181","name":"In Progress","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10001","description":"Ce ticket est en cours de traitement par la personne assignée.","iconUrl":"https://riadamine59.atlassian.net/","name":"En cours","id":"10001","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/4","id":4,"key":"indeterminate","colorName":"yellow","name":"En cours"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"191","name":"Cancelled","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10003","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Annulé","id":"10003","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Terminé"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"211","name":"In Review","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10005","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Revue en cours","id":"10005","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/4","id":4,"key":"indeterminate","colorName":"yellow","name":"En cours"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false}]} 
  </msg>
-<msg time="2025-03-07T01:09:32.280995" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-03-09T21:28:24.687977" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-03-07T01:09:32.282011" level="INFO">${available_transitions} = &lt;Response [200]&gt;</msg>
+<msg time="2025-03-09T21:28:24.690055" level="INFO">${available_transitions} = &lt;Response [200]&gt;</msg>
 <var>${available_transitions}</var>
 <arg>jira</arg>
-<arg>/rest/api/2/issue/${ticket_id}/transitions</arg>
+<arg>/rest/api/2/issue/${ticket_key}/transitions</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.092679" elapsed="0.189332"/>
+<status status="PASS" start="2025-03-09T21:28:24.452234" elapsed="0.237821"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.283011" level="INFO">"Transitions disponibles pour le ticket 10133:"</msg>
-<arg>"Transitions disponibles pour le ticket ${ticket_id}:"</arg>
+<msg time="2025-03-09T21:28:24.690055" level="INFO">"Transitions disponibles pour le ticket AL-86:"</msg>
+<arg>"Transitions disponibles pour le ticket ${ticket_key}:"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.282011" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:24.690055" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.283011" level="INFO">"ID: 151, Nom: Done"</msg>
+<msg time="2025-03-09T21:28:24.691191" level="INFO">"ID: 151, Nom: Done"</msg>
 <arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.283011" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:24.690055" elapsed="0.001136"/>
 </kw>
 <var name="${transition}">{'id': '151', 'name': 'Done', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10002', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Terminé(e)', 'id'...</var>
-<status status="PASS" start="2025-03-07T01:09:32.283011" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:24.690055" elapsed="0.001136"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.284011" level="INFO">"ID: 171, Nom: Rejected"</msg>
+<msg time="2025-03-09T21:28:24.691191" level="INFO">"ID: 171, Nom: Rejected"</msg>
 <arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.284011" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.691191" elapsed="0.000000"/>
 </kw>
 <var name="${transition}">{'id': '171', 'name': 'Rejected', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10004', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Rejeté', 'id'...</var>
-<status status="PASS" start="2025-03-07T01:09:32.284011" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.691191" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.285011" level="INFO">"ID: 181, Nom: In Progress"</msg>
+<msg time="2025-03-09T21:28:24.692197" level="INFO">"ID: 181, Nom: In Progress"</msg>
 <arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.284011" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:24.692197" elapsed="0.000000"/>
 </kw>
 <var name="${transition}">{'id': '181', 'name': 'In Progress', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10001', 'description': 'Ce ticket est en cours de traitement par la personne assignée.', 'iconU...</var>
-<status status="PASS" start="2025-03-07T01:09:32.284011" elapsed="0.001000"/>
+<status status="PASS" start="2025-03-09T21:28:24.692197" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.285011" level="INFO">"ID: 191, Nom: Cancelled"</msg>
+<msg time="2025-03-09T21:28:24.693200" level="INFO">"ID: 191, Nom: Cancelled"</msg>
 <arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.285011" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.692197" elapsed="0.001003"/>
 </kw>
 <var name="${transition}">{'id': '191', 'name': 'Cancelled', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10003', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Annulé', 'id...</var>
-<status status="PASS" start="2025-03-07T01:09:32.285011" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.692197" elapsed="0.001003"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.286010" level="INFO">"ID: 211, Nom: In Review"</msg>
+<msg time="2025-03-09T21:28:24.693200" level="INFO">"ID: 211, Nom: In Review"</msg>
 <arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.286010" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.693200" elapsed="0.000000"/>
 </kw>
 <var name="${transition}">{'id': '211', 'name': 'In Review', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10005', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Revue en cou...</var>
-<status status="PASS" start="2025-03-07T01:09:32.285011" elapsed="0.000999"/>
+<status status="PASS" start="2025-03-09T21:28:24.693200" elapsed="0.000000"/>
 </iter>
 <var>${transition}</var>
 <value>@{available_transitions.json()["transitions"]}</value>
-<status status="PASS" start="2025-03-07T01:09:32.283011" elapsed="0.002999"/>
+<status status="PASS" start="2025-03-09T21:28:24.690055" elapsed="0.003145"/>
 </for>
 <return>
 <value>${available_transitions.json()["transitions"]}</value>
-<status status="PASS" start="2025-03-07T01:09:32.286010" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.693200" elapsed="0.000000"/>
 </return>
-<msg time="2025-03-07T01:09:32.286010" level="INFO">${transitions} = [{'id': '151', 'name': 'Done', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10002', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Terminé(e)', 'id...</msg>
+<msg time="2025-03-09T21:28:24.694156" level="INFO">${transitions} = [{'id': '151', 'name': 'Done', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10002', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Terminé(e)', 'id...</msg>
 <var>${transitions}</var>
-<arg>${ticket_id}</arg>
+<arg>${ticket_key}</arg>
 <doc>Affiche toutes les transitions disponibles pour un ticket</doc>
-<status status="PASS" start="2025-03-07T01:09:32.091679" elapsed="0.194331"/>
+<status status="PASS" start="2025-03-09T21:28:24.451173" elapsed="0.242983"/>
 </kw>
 <kw name="Ajouter un commentaire">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:32.287010" level="INFO">${data} = {'body': '"Ce ticket a été créé automatiquement via Robot Framework et a été commenté."'}</msg>
+<msg time="2025-03-09T21:28:24.695107" level="INFO">${data} = {'body': '"Ce ticket a été créé automatiquement via Robot Framework et a été commenté."'}</msg>
 <var>${data}</var>
 <arg>body=${commentaire}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.287010" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:24.695107" elapsed="0.000000"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-03-07T01:09:33.294654" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/10133/comment 
- path_url=/rest/api/2/issue/10133/comment 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=d9b97d3818a79e56c2bda41dc92dddb5062a2008_lin', 'Content-Length': '126', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
+<msg time="2025-03-09T21:28:25.103778" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/comment 
+ path_url=/rest/api/2/issue/AL-86/comment 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=4c29a02aa48f9e4aae1b2bbfe5d84ae01fe9ae1c_lin', 'Content-Length': '126', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
  body=b'{"body": "\\"Ce ticket a \\u00e9t\\u00e9 cr\\u00e9\\u00e9 automatiquement via Robot Framework et a \\u00e9t\\u00e9 comment\\u00e9.\\""}' 
  </msg>
-<msg time="2025-03-07T01:09:33.294654" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/10133/comment 
+<msg time="2025-03-09T21:28:25.103778" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/comment 
  status=201, reason=Created 
- headers={'Date': 'Fri, 07 Mar 2025 01:09:32 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': 'b0a2ca849958d55c3d2e8e84d708af18', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Location': 'https://riadamine59.atlassian.net/rest/api/2/issue/10133/comment/10058', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': 'fdbfda629d7b409fb21bb4401d0e10bb', 'Atl-Request-Id': 'fdbfda62-9d7b-409f-b21b-b4401d0e10bb', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=843,atl-edge-internal;dur=12,atl-edge-upstream;dur=831,atl-edge-pop;desc="aws-eu-central-2"', 'Transfer-Encoding': 'chunked'} 
- body={"self":"https://riadamine59.atlassian.net/rest/api/2/issue/10133/comment/10058","id":"10058","author":{"self":"https://riadamine59.atlassian.net/rest/api/2/user?accountId=712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","accountId":"712020:c146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","emailAddress":"riadamine59@gmail.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","24x24":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","16x16":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","32x32":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png"},"displayName":"Riad El Moudden","active":true,"timeZone":"Africa/Casablanca","accountType":"atlassian"},"body":"\"Ce ticket a été créé automatiquement via Robot Framework et a été commenté.\"","updateAuthor":{"self":"https://riadamine59.atlassian.net/rest/api/2/user?accountId=712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","accountId":"712020:c146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","emailAddress":"riadamine59@gmail.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","24x24":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","16x16":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","32x32":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png"},"displayName":"Riad El Moudden","active":true,"timeZone":"Africa/Casablanca","accountType":"atlassian"},"created":"2025-03-07T01:09:32.074+0000","updated":"2025-03-07T01:09:32.074+0000","jsdPublic":true} 
+ headers={'Date': 'Sun, 09 Mar 2025 21:28:23 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': 'fded37d17f3aa7c56a4837cc99b3112a', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Location': 'https://riadamine59.atlassian.net/rest/api/2/issue/10197/comment/10096', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '9d75f1d7640946d498b4ef3bfd14804f', 'Atl-Request-Id': '9d75f1d7-6409-46d4-98b4-ef3bfd14804f', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=306,atl-edge-internal;dur=13,atl-edge-upstream;dur=293,atl-edge-pop;desc="aws-eu-west-2"', 'Transfer-Encoding': 'chunked'} 
+ body={"self":"https://riadamine59.atlassian.net/rest/api/2/issue/10197/comment/10096","id":"10096","author":{"self":"https://riadamine59.atlassian.net/rest/api/2/user?accountId=712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","accountId":"712020:c146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","emailAddress":"riadamine59@gmail.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","24x24":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","16x16":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","32x32":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png"},"displayName":"Riad El Moudden","active":true,"timeZone":"Africa/Casablanca","accountType":"atlassian"},"body":"\"Ce ticket a été créé automatiquement via Robot Framework et a été commenté.\"","updateAuthor":{"self":"https://riadamine59.atlassian.net/rest/api/2/user?accountId=712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","accountId":"712020:c146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4","emailAddress":"riadamine59@gmail.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","24x24":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","16x16":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png","32x32":"https://secure.gravatar.com/avatar/91107b565c24a90945b353d3b124c68f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-6.png"},"displayName":"Riad El Moudden","active":true,"timeZone":"Africa/Casablanca","accountType":"atlassian"},"created":"2025-03-09T21:28:23.610+0000","updated":"2025-03-09T21:28:23.610+0000","jsdPublic":true} 
  </msg>
-<msg time="2025-03-07T01:09:33.294654" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-03-09T21:28:25.103778" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-03-07T01:09:33.295640" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2025-03-09T21:28:25.104784" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>jira</arg>
-<arg>/rest/api/2/issue/${ticket_id}/comment</arg>
+<arg>/rest/api/2/issue/${ticket_key}/comment</arg>
 <arg>json=${data}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.287010" elapsed="1.008630"/>
+<status status="PASS" start="2025-03-09T21:28:24.695107" elapsed="0.409677"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-03-07T01:09:33.296639" level="INFO">Argument types are:
+<msg time="2025-03-09T21:28:25.105779" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.295640" elapsed="0.000999"/>
+<status status="PASS" start="2025-03-09T21:28:25.104784" elapsed="0.000995"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:33.296639" level="INFO">"✅ Commentaire ajouté au ticket 10133"</msg>
-<arg>"✅ Commentaire ajouté au ticket ${ticket_id}"</arg>
+<msg time="2025-03-09T21:28:25.105779" level="INFO">"✅ Commentaire ajouté au ticket AL-86"</msg>
+<arg>"✅ Commentaire ajouté au ticket ${ticket_key}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.296639" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:25.105779" elapsed="0.000000"/>
 </kw>
-<arg>${ticket_id}</arg>
+<arg>${ticket_key}</arg>
 <arg>"Ce ticket a été créé automatiquement via Robot Framework et a été commenté."</arg>
 <doc>Ajoute un commentaire à un ticket Jira.</doc>
-<status status="PASS" start="2025-03-07T01:09:32.287010" elapsed="1.009629"/>
+<status status="PASS" start="2025-03-09T21:28:24.694156" elapsed="0.411623"/>
 </kw>
 <kw name="Mettre à jour le statut du ticket">
-<kw name="Convert To String" owner="BuiltIn">
-<msg time="2025-03-07T01:09:33.297639" level="INFO">${transition_id} = 211</msg>
-<var>${transition_id}</var>
-<arg>${transition_id}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.297639" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:33.297639" level="INFO">"🔹 Tentative de mise à jour du ticket 10133 avec la transition ID 211"</msg>
-<arg>"🔹 Tentative de mise à jour du ticket ${ticket_id} avec la transition ID ${transition_id}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.297639" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:33.297639" level="INFO">${transition} = {'id': '211'}</msg>
-<var>${transition}</var>
-<arg>id=${transition_id}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.297639" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-03-07T01:09:33.297639" level="INFO">${data} = {'transition': {'id': '211'}}</msg>
-<var>${data}</var>
-<arg>transition=${transition}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.297639" elapsed="0.000000"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-03-07T01:09:34.273390" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/10133/transitions 
- path_url=/rest/api/2/issue/10133/transitions 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=d9b97d3818a79e56c2bda41dc92dddb5062a2008_lin', 'Content-Length': '29', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
- body=b'{"transition": {"id": "211"}}' 
- </msg>
-<msg time="2025-03-07T01:09:34.273390" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/10133/transitions 
- status=204, reason=No Content 
- headers={'Date': 'Fri, 07 Mar 2025 01:09:33 GMT', 'Content-Type': 'text/html;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '66a5b67e4d6812561acd1d30d05fb414', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': 'f977bd6fa5d74a93ba426a79912f9bdc', 'Atl-Request-Id': 'f977bd6f-a5d7-4a93-ba42-6a79912f9bdc', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=902,atl-edge-internal;dur=11,atl-edge-upstream;dur=891,atl-edge-pop;desc="aws-eu-central-2"'} 
+<kw name="Lister les transitions disponibles">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T21:28:25.314187" level="INFO">GET Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/transitions 
+ path_url=/rest/api/2/issue/AL-86/transitions 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=4c29a02aa48f9e4aae1b2bbfe5d84ae01fe9ae1c_lin', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
  body=None 
  </msg>
-<msg time="2025-03-07T01:09:34.273390" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-03-09T21:28:25.314187" level="INFO">GET Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/transitions 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 09 Mar 2025 21:28:23 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '86619bd76dc6d87ae54380c763e261b1', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '6b3b51da44524db9b73c723426b8b083', 'Atl-Request-Id': '6b3b51da-4452-4db9-b73c-723426b8b083', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=114,atl-edge-internal;dur=16,atl-edge-upstream;dur=98,atl-edge-pop;desc="aws-eu-west-2"', 'Transfer-Encoding': 'chunked'} 
+ body={"expand":"transitions","transitions":[{"id":"151","name":"Done","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10002","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Terminé(e)","id":"10002","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Terminé"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"171","name":"Rejected","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10004","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Rejeté","id":"10004","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Terminé"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"181","name":"In Progress","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10001","description":"Ce ticket est en cours de traitement par la personne assignée.","iconUrl":"https://riadamine59.atlassian.net/","name":"En cours","id":"10001","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/4","id":4,"key":"indeterminate","colorName":"yellow","name":"En cours"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"191","name":"Cancelled","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10003","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Annulé","id":"10003","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/3","id":3,"key":"done","colorName":"green","name":"Terminé"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false},{"id":"211","name":"In Review","to":{"self":"https://riadamine59.atlassian.net/rest/api/2/status/10005","description":"","iconUrl":"https://riadamine59.atlassian.net/","name":"Revue en cours","id":"10005","statusCategory":{"self":"https://riadamine59.atlassian.net/rest/api/2/statuscategory/4","id":4,"key":"indeterminate","colorName":"yellow","name":"En cours"}},"hasScreen":false,"isGlobal":true,"isInitial":false,"isAvailable":true,"isConditional":false,"isLooped":false}]} 
+ </msg>
+<msg time="2025-03-09T21:28:25.314187" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-03-07T01:09:34.274391" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<msg time="2025-03-09T21:28:25.315185" level="INFO">${available_transitions} = &lt;Response [200]&gt;</msg>
+<var>${available_transitions}</var>
+<arg>jira</arg>
+<arg>/rest/api/2/issue/${ticket_key}/transitions</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.106778" elapsed="0.208407"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.315185" level="INFO">"Transitions disponibles pour le ticket AL-86:"</msg>
+<arg>"Transitions disponibles pour le ticket ${ticket_key}:"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.315185" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.316186" level="INFO">"ID: 151, Nom: Done"</msg>
+<arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.316186" elapsed="0.000000"/>
+</kw>
+<var name="${transition}">{'id': '151', 'name': 'Done', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10002', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Terminé(e)', 'id'...</var>
+<status status="PASS" start="2025-03-09T21:28:25.316186" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.317185" level="INFO">"ID: 171, Nom: Rejected"</msg>
+<arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.317185" elapsed="0.000000"/>
+</kw>
+<var name="${transition}">{'id': '171', 'name': 'Rejected', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10004', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Rejeté', 'id'...</var>
+<status status="PASS" start="2025-03-09T21:28:25.317185" elapsed="0.000999"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.318461" level="INFO">"ID: 181, Nom: In Progress"</msg>
+<arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.318276" elapsed="0.000185"/>
+</kw>
+<var name="${transition}">{'id': '181', 'name': 'In Progress', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10001', 'description': 'Ce ticket est en cours de traitement par la personne assignée.', 'iconU...</var>
+<status status="PASS" start="2025-03-09T21:28:25.318276" elapsed="0.000185"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.319502" level="INFO">"ID: 191, Nom: Cancelled"</msg>
+<arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.318461" elapsed="0.001041"/>
+</kw>
+<var name="${transition}">{'id': '191', 'name': 'Cancelled', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10003', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Annulé', 'id...</var>
+<status status="PASS" start="2025-03-09T21:28:25.318461" elapsed="0.001041"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.319502" level="INFO">"ID: 211, Nom: In Review"</msg>
+<arg>"ID: ${transition["id"]}, Nom: ${transition["name"]}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.319502" elapsed="0.000000"/>
+</kw>
+<var name="${transition}">{'id': '211', 'name': 'In Review', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10005', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Revue en cou...</var>
+<status status="PASS" start="2025-03-09T21:28:25.319502" elapsed="0.000000"/>
+</iter>
+<var>${transition}</var>
+<value>@{available_transitions.json()["transitions"]}</value>
+<status status="PASS" start="2025-03-09T21:28:25.315185" elapsed="0.004317"/>
+</for>
+<return>
+<value>${available_transitions.json()["transitions"]}</value>
+<status status="PASS" start="2025-03-09T21:28:25.319502" elapsed="0.000000"/>
+</return>
+<msg time="2025-03-09T21:28:25.320510" level="INFO">${transitions} = [{'id': '151', 'name': 'Done', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10002', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Terminé(e)', 'id...</msg>
+<var>${transitions}</var>
+<arg>${ticket_key}</arg>
+<doc>Affiche toutes les transitions disponibles pour un ticket</doc>
+<status status="PASS" start="2025-03-09T21:28:25.105779" elapsed="0.214731"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.320510" level="INFO">${transition_id} = None</msg>
+<var>${transition_id}</var>
+<arg>None</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.320510" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${transition[&quot;name&quot;]}' == '${transition_name}'">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.321495" level="INFO">${transition_id} = 151</msg>
+<var>${transition_id}</var>
+<arg>${transition["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.320510" elapsed="0.000985"/>
+</kw>
+<break>
+<status status="PASS" start="2025-03-09T21:28:25.321495" elapsed="0.000000"/>
+</break>
+<status status="PASS" start="2025-03-09T21:28:25.320510" elapsed="0.000985"/>
+</branch>
+<status status="PASS" start="2025-03-09T21:28:25.320510" elapsed="0.000985"/>
+</if>
+<var name="${transition}">{'id': '151', 'name': 'Done', 'to': {'self': 'https://riadamine59.atlassian.net/rest/api/2/status/10002', 'description': '', 'iconUrl': 'https://riadamine59.atlassian.net/', 'name': 'Terminé(e)', 'id'...</var>
+<status status="PASS" start="2025-03-09T21:28:25.320510" elapsed="0.000985"/>
+</iter>
+<var>${transition}</var>
+<value>@{transitions}</value>
+<status status="PASS" start="2025-03-09T21:28:25.320510" elapsed="0.000985"/>
+</for>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${transition_id}' == 'None'</arg>
+<arg>Fail</arg>
+<arg>"❌ Transition '${transition_name}' non trouvée."</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.321495" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.321495" level="INFO">${transition_data} = {'id': '151'}</msg>
+<var>${transition_data}</var>
+<arg>id=${transition_id}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.321495" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.322462" level="INFO">${data} = {'transition': {'id': '151'}}</msg>
+<var>${data}</var>
+<arg>transition=${transition_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.321495" elapsed="0.000967"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T21:28:25.925336" level="INFO">POST Request : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/transitions 
+ path_url=/rest/api/2/issue/AL-86/transitions 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Cookie': 'atlassian.xsrf.token=4c29a02aa48f9e4aae1b2bbfe5d84ae01fe9ae1c_lin', 'Content-Length': '29', 'Authorization': 'Basic cmlhZGFtaW5lNTlAZ21haWwuY29tOkFUQVRUM3hGZkdGMGFBWmFwc00tTF9BUE14RmlVREw4bF9PV2RDandsVnNfdXJ6VWlWdG1IcHpJMXdEdFpKN25WWGM1VlFwYmMxdFRlUTFIVjRsS1JQZVppRWVzLWJYb19pdGRUVGhFMUVpWVlhLXhJUm5DWFlDMjlQajN6M2loRDdPM0NhMG53T2xoZE42SFA1a3RWNWdaT3NyT3BmcDJycHJmSjF5MU5oc09sM0g5akZvc0FTcz00REIyQUE1Qw=='} 
+ body=b'{"transition": {"id": "151"}}' 
+ </msg>
+<msg time="2025-03-09T21:28:25.925336" level="INFO">POST Response : url=https://riadamine59.atlassian.net/rest/api/2/issue/AL-86/transitions 
+ status=204, reason=No Content 
+ headers={'Date': 'Sun, 09 Mar 2025 21:28:24 GMT', 'Content-Type': 'text/html;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '6985728672ab3ff2fc378ad677ea437a', 'X-Aaccountid': '712020%3Ac146a5a7-0bdb-43fd-9bd9-fe6a6b68fde4', 'Cache-Control': 'no-cache, no-store, no-transform', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '8c2cbf3d848b49c3854509be2814c172', 'Atl-Request-Id': '8c2cbf3d-848b-49c3-8545-09be2814c172', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Server-Timing': 'atl-edge;dur=517,atl-edge-internal;dur=13,atl-edge-upstream;dur=505,atl-edge-pop;desc="aws-eu-west-2"'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T21:28:25.925336" level="INFO">c:\Users\geams\OneDrive\Bureau\ProjetAlten\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'riadamine59.atlassian.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-03-09T21:28:25.926336" level="INFO">${response} = &lt;Response [204]&gt;</msg>
 <var>${response}</var>
 <arg>jira</arg>
-<arg>/rest/api/2/issue/${ticket_id}/transitions</arg>
+<arg>/rest/api/2/issue/${ticket_key}/transitions</arg>
 <arg>json=${data}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.297639" elapsed="0.976752"/>
+<status status="PASS" start="2025-03-09T21:28:25.322462" elapsed="0.603874"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:34.275393" level="INFO">"🔹 Réponse HTTP: 204"</msg>
+<msg time="2025-03-09T21:28:25.927336" level="INFO">"🔹 Réponse HTTP: 204"</msg>
 <arg>"🔹 Réponse HTTP: ${response.status_code}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:34.274391" elapsed="0.001002"/>
+<status status="PASS" start="2025-03-09T21:28:25.927336" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:34.275393" level="INFO">"🔹 Contenu de la réponse: "</msg>
+<msg time="2025-03-09T21:28:25.928336" level="INFO">"🔹 Contenu de la réponse: "</msg>
 <arg>"🔹 Contenu de la réponse: ${response.content}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:34.275393" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:25.927336" elapsed="0.001000"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-03-07T01:09:34.275393" level="INFO">Argument types are:
+<msg time="2025-03-09T21:28:25.928336" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>204</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-03-07T01:09:34.275393" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T21:28:25.928336" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-03-07T01:09:34.276407" level="INFO">"✅ Ticket 10133 mis à jour avec la transition ID 211"</msg>
-<arg>"✅ Ticket ${ticket_id} mis à jour avec la transition ID ${transition_id}"</arg>
+<msg time="2025-03-09T21:28:25.928336" level="INFO">"✅ Ticket AL-86 mis à jour avec la transition 'Done'"</msg>
+<arg>"✅ Ticket ${ticket_key} mis à jour avec la transition '${transition_name}'"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-07T01:09:34.275393" elapsed="0.001014"/>
+<status status="PASS" start="2025-03-09T21:28:25.928336" elapsed="0.000000"/>
 </kw>
-<arg>${ticket_id}</arg>
-<arg>211</arg>
-<doc>Change le statut du ticket Jira via une transition.</doc>
-<status status="PASS" start="2025-03-07T01:09:33.296639" elapsed="0.979768"/>
+<arg>${ticket_key}</arg>
+<arg>Done</arg>
+<doc>Change le statut du ticket Jira via son nom.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.105779" elapsed="0.822557"/>
+</kw>
+<kw name="Ajouter une pièce jointe">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:25.929336" level="INFO">"🔹 Ajout de la pièce jointe 'C:/Users/geams/OneDrive/Bureau/Jira.txt' au ticket 'AL-86'"</msg>
+<arg>"🔹 Ajout de la pièce jointe '${file_path}' au ticket '${ticket_key}'"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.929336" elapsed="0.000000"/>
+</kw>
+<kw name="Upload File" owner="JiraUpload">
+<msg time="2025-03-09T21:28:26.912917" level="INFO">✅ Pièce jointe ajoutée avec succès !</msg>
+<msg time="2025-03-09T21:28:26.912917" level="INFO">${result} = SUCCESS</msg>
+<var>${result}</var>
+<arg>${ticket_key}</arg>
+<arg>${file_path}</arg>
+<arg>${JIRA_USER}</arg>
+<arg>${JIRA_TOKEN}</arg>
+<status status="PASS" start="2025-03-09T21:28:25.929336" elapsed="0.983581"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T21:28:26.913932" level="INFO">"✅ Résultat de l'ajout de pièce jointe : SUCCESS"</msg>
+<arg>"✅ Résultat de l'ajout de pièce jointe : ${result}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T21:28:26.912917" elapsed="0.001015"/>
+</kw>
+<arg>${ticket_key}</arg>
+<arg>${ATTACHMENT_PATH}</arg>
+<doc>Ajoute une pièce jointe au ticket Jira via la librairie Python personnalisée.</doc>
+<status status="PASS" start="2025-03-09T21:28:25.929336" elapsed="0.984596"/>
 </kw>
 <doc>Créer un ticket et ajouter un commentaire, mettre à jour le statut, et ajouter une pièce jointe.</doc>
-<status status="PASS" start="2025-03-07T01:09:30.394191" elapsed="3.882216"/>
+<status status="PASS" start="2025-03-09T21:28:23.223895" elapsed="3.690037"/>
 </test>
-<status status="PASS" start="2025-03-07T01:09:29.872192" elapsed="4.406200"/>
+<status status="PASS" start="2025-03-09T21:28:22.812019" elapsed="4.102899"/>
 </suite>
 <statistics>
 <total>
@@ -363,6 +501,5 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2025-03-07T01:09:29.865191" level="WARN">Error in file 'C:\Users\geams\OneDrive\Bureau\ProjetAlten\test_incident.robot' on line 67: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>
