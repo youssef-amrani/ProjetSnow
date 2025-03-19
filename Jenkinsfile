@@ -28,7 +28,7 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                bat "${PYTHON_ENV}/robot -d ${ROBOT_RESULTS_DIR} ${WORKSPACE}/test/test_incident.robot"
+                bat "${PYTHON_ENV}/robot -d ${ROBOT_RESULTS_DIR} ${WORKSPACE}/tests/test_incident.robot"
             }
         }
         
