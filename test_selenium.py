@@ -11,6 +11,7 @@ driver = webdriver.Chrome(service=service)
 # Ouvre Google
 driver.get("https://www.google.com")
 print("Titre de la page :", driver.title)
+driver._shadowroot_cls
 
 # Ferme le navigateur
 driver.quit()
